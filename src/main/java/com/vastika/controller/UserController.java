@@ -43,7 +43,7 @@ public class UserController {
             }
             break;
         case"list":
-            
+
 
     }
     while (true);
