@@ -1,38 +1,38 @@
 package com.vastika.service;
 
+import com.vastika.Dao.UserDao;
+import com.vastika.Dao.UserDaoImpl;
 import com.vastika.model.User;
 
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
-    UserService userService ;
-    public UserServiceImpl(){
-        userService = new UserServiceImpl();
-    }
+    UserDao userDao= new UserDaoImpl();
+
 
     @Override
     public int saveUser(User user) {
-        return userService.saveUser(user);
+        return userDao.saveUser(user);
     }
 
     @Override
     public int updateUser(User user) {
-        return userService.updateUser(user) ;
+        return userDao.updateUser(user) ;
     }
 
     @Override
     public int deleteUser(int id) {
-        return userService.deleteUser(id);
+        return userDao.deleteUser(id);
     }
 
     @Override
     public User getUserById(int id) {
-        return userService.getUserById(id);
+        return userDao.getUserById(id);
     }
 
     @Override
     public List<User> getAllUser() {
-        return userService.getAllUser();
+        return userDao.getAllUser();
     }
 }
